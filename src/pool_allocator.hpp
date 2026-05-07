@@ -1,6 +1,6 @@
 #pragma once
-#include <cstddef> // std::size_t and std::byte
-#include <new> // placement new
+#include <cstddef> 
+#include <new> 
 
 template<typename T, std::size_t N>
 struct PoolAllocator {
