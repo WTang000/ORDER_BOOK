@@ -1,12 +1,7 @@
-// to preallocate memory upfront instead of waiting until user enters something
 #pragma once
 #include <cstddef> // std::size_t and std::byte
 #include <new> // placement new
 
-/**
- * T: order type
- * N: max number of objects
- */
 template<typename T, std::size_t N>
 struct PoolAllocator {
     alignas(T) std::byte storage[N * sizeof(T)];
